@@ -57,7 +57,3 @@ O enunciado do LAB02 exige um sistema de aluguel acessível após cadastro prév
 6. A exclusão de cliente com histórico de pedidos/contratos retorna conflito.
 7. CPF e e-mail identificam contas únicas. CPF com apenas dígitos repetidos ou verificadores incorretos é recusado.
 8. Valores de orçamento são calculados no servidor, não confiados ao JSON enviado pelo navegador.
-
-## Critério de conclusão acadêmica
-
-Apresentar o fluxo executável, explicar a correspondência com os diagramas e mostrar as alterações de v1 para v2. O aluno deve preencher autoria e publicar o repositório; feedback de sala e versões previamente produzidas pelo aluno devem ser adicionados quando existirem, sem serem substituídos por um histórico fictício.
