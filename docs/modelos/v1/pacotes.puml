@@ -1,0 +1,14 @@
+@startuml
+skinparam backgroundColor #F8FAF7
+skinparam shadowing false
+skinparam defaultFontName SansSerif
+skinparam ArrowColor #356854
+skinparam packageStyle rectangle
+skinparam classBackgroundColor #EFF5E9
+skinparam classBorderColor #356854
+package "Interface Web" as UI
+package "Domínio de Aluguel" as D
+package "Persistência JSON" as P
+UI --> D : operações
+D --> P : dados
+@enduml

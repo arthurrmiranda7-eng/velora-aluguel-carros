@@ -1,0 +1,25 @@
+@startuml
+skinparam backgroundColor #F8FAF7
+skinparam shadowing false
+skinparam defaultFontName SansSerif
+skinparam ArrowColor #356854
+skinparam packageStyle rectangle
+skinparam classBackgroundColor #EFF5E9
+skinparam classBorderColor #356854
+left to right direction
+actor Cliente
+actor Agente
+rectangle "Sistema de Aluguel de Carros — v1" {
+ usecase "Cadastrar cliente" as C
+ usecase "Solicitar aluguel" as P
+ usecase "Consultar pedido" as V
+ usecase "Avaliar pedido" as A
+ usecase "Executar contrato" as E
+}
+Cliente --> C
+Cliente --> P
+Cliente --> V
+Agente --> A
+Agente --> E
+E ..> A : <<include>>\nparecer favorável
+@enduml

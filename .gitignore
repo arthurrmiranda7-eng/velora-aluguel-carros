@@ -1,0 +1,10 @@
+node_modules/
+.npm/
+*.log
+.env
+.env.*
+!.env.example
+db.json.backup-*
+coverage/
+.DS_Store
+Thumbs.db

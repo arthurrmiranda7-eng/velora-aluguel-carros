@@ -1,0 +1,38 @@
+@startuml
+skinparam backgroundColor #F8FAF7
+skinparam shadowing false
+skinparam defaultFontName SansSerif
+skinparam ArrowColor #356854
+skinparam packageStyle rectangle
+skinparam classBackgroundColor #EFF5E9
+skinparam classBorderColor #356854
+class Cliente {
+ id
+ nome
+ cpf
+}
+class Agente {
+ id
+ nome
+}
+class Automovel {
+ id
+ marca
+ modelo
+ placa
+}
+class Pedido {
+ id
+ inicio
+ fim
+ status
+}
+class Contrato {
+ id
+ total
+}
+Cliente "1" -- "0..*" Pedido : solicita
+Automovel "1" -- "0..*" Pedido : escolhido em
+Agente "1" -- "0..*" Pedido : avalia
+Pedido "1" -- "0..1" Contrato : origina
+@enduml

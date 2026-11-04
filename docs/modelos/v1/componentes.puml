@@ -1,0 +1,18 @@
+@startuml
+skinparam backgroundColor #F8FAF7
+skinparam shadowing false
+skinparam defaultFontName SansSerif
+skinparam ArrowColor #356854
+skinparam packageStyle rectangle
+skinparam classBackgroundColor #EFF5E9
+skinparam classBorderColor #356854
+node "Computador local" {
+ [Navegador] as B
+}
+node "Servidor central" {
+ [Aplicação Web] as S
+ database "Arquivo JSON" as DB
+}
+B --> S : HTTP
+S --> DB : leitura / escrita
+@enduml

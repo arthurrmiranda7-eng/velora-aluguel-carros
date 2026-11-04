@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 320" role="img" aria-labelledby="title desc">
+<title id="title">Sedã prata azulado</title><desc id="desc">Ilustração original de automóvel em perspectiva, sem marca.</desc>
+<defs>
+<linearGradient id="body" x1="0" y1="0" x2="0.1" y2="1"><stop stop-color="#edf4f6"/><stop offset=".37" stop-color="#9fb4be"/><stop offset=".75" stop-color="#5b7584"/><stop offset="1" stop-color="#9fb4be"/></linearGradient>
+<linearGradient id="roof" x1="0" y1="0" x2=".9" y2="1"><stop stop-color="#dce8ed"/><stop offset="1" stop-color="#5b7584"/></linearGradient>
+<linearGradient id="glass" x1="0" y1="0" x2=".5" y2="1"><stop stop-color="#263e49"/><stop offset=".5" stop-color="#4f6f7b"/><stop offset="1" stop-color="#93abb4"/></linearGradient>
+<linearGradient id="hood" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#edf4f6"/><stop offset="1" stop-color="#9fb4be"/></linearGradient>
+<radialGradient id="rim"><stop stop-color="#f5f6f5"/><stop offset=".46" stop-color="#bfc8c9"/><stop offset=".85" stop-color="#65747c"/><stop offset="1" stop-color="#b5c0c4"/></radialGradient>
+<radialGradient id="tire"><stop stop-color="#303b42"/><stop offset=".77" stop-color="#172127"/><stop offset="1" stop-color="#263139"/></radialGradient>
+<filter id="blur"><feGaussianBlur stdDeviation="6"/></filter>
+</defs>
+<ellipse cx="327" cy="268" rx="249" ry="13" fill="#15282f" opacity=".17" filter="url(#blur)"/>
+<path d="M195 151 L248 103 Q264 91 291 92 L365 95 Q388 97 412 119 L454 151 Z" fill="url(#roof)" stroke="#5b7584" stroke-width="2"/>
+<path d="M221 148 L260 111 Q269 106 285 106 L358 108 Q374 109 394 125 L421 149 Z" fill="url(#glass)" stroke="#263d48" stroke-width="4" stroke-linejoin="round"/>
+<path d="M328 108 L329 150" fill="none" stroke="#263d48" stroke-width="8"/>
+<path d="M247 121 L273 110 M345 113 L377 139" stroke="#e0f2f4" stroke-width="3" opacity=".3"/>
+<path d="M91 168 Q123 153 195 151 L454 151 Q508 156 554 181 L572 200 L568 225 Q546 241 512 242 L112 241 Q81 237 77 218 L77 192 Q79 178 91 168 Z" fill="url(#body)" stroke="#5b7584" stroke-width="2"/>
+<path d="M454 151 Q507 156 554 181 L542 194 L409 174 Z" fill="url(#hood)" opacity=".9"/>
+<path d="M91 179 Q205 164 409 174 L542 194" fill="none" stroke="#edf4f6" stroke-width="2" opacity=".7"/>
+<path d="M84 221 L556 225 L547 239 L109 241 Q87 236 84 221 Z" fill="#5b7584" opacity=".8"/>
+<path d="M100 215 L525 217" fill="none" stroke="#f5f5ef" stroke-width="2" opacity=".18"/>
+<path d="M205 170 L204 213 M402 169 L417 211" fill="none" stroke="#5b7584" stroke-width="1.8" opacity=".72"/>
+<path d="M329 109 L327 178" fill="none" stroke="#5b7584" stroke-width="1" opacity=".2"/>
+<path d="M115 223 A50 50 0 0 1 215 223 L211 242 L118 242 Z M417 224 A51 51 0 0 1 519 224 L516 243 L419 243 Z" fill="#213139"/>
+<g transform="translate(166 230)"><circle r="39" fill="url(#tire)"/><circle r="27" fill="url(#rim)"/><circle r="22" fill="#6d7b82"/><g stroke="#d9e2e4" stroke-width="5"><path d="M0-21V21 M-20-6L20 6 M-13 17L13-17 M-13-17L13 17 M-20 6L20-6"/></g><circle r="8" fill="#a6b7bd"/><circle r="3" fill="#54666f"/></g>
+<g transform="translate(468 232)"><circle r="41" fill="url(#tire)"/><circle r="28" fill="url(#rim)"/><circle r="23" fill="#64747b"/><g stroke="#d9e2e4" stroke-width="5"><path d="M0-22V22 M-21-7L21 7 M-14 18L14-18 M-14-18L14 18 M-21 7L21-7"/></g><circle r="8" fill="#a6b7bd"/><circle r="3" fill="#54666f"/></g>
+<path d="M224 174 L244 174 M354 175 L374 175" stroke="#edf4f6" stroke-width="4" stroke-linecap="round"/>
+<path d="M397 147 Q407 133 420 142 L427 152 L412 158 L398 153 Z" fill="#5b7584"/><path d="M402 145 L417 145" stroke="#edf4f6" stroke-width="3" stroke-linecap="round"/>
+<path d="M505 181 L541 186 L552 195 L512 192 Z" fill="#eaf8ff" stroke="#c7e0e8" stroke-width="2"/><path d="M513 186 L541 191" stroke="#fff" stroke-width="3"/>
+<path d="M78 183 L94 178 L94 197 L77 201" fill="#d86051"/><path d="M80 187 L91 184" stroke="#ffb39c" stroke-width="3"/>
+<path d="M530 201 L566 205 L560 222 L522 221 Z" fill="#20323b" stroke="#72888e" stroke-width="1.5"/>
+<path d="M533 207 L560 209 M531 212 L558 214" stroke="#879b9f" stroke-width="1"/>
+<path d="M537 228 L560 228" stroke="#d2dcdf" stroke-width="3" stroke-linecap="round"/>
+<path d="M233 233 L395 233" stroke="#edf4f6" stroke-width="2" opacity=".32"/>
+</svg>

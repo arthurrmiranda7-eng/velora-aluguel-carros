@@ -1,0 +1,27 @@
+@startuml
+skinparam backgroundColor #F8FAF7
+skinparam shadowing false
+skinparam defaultFontName SansSerif
+skinparam ArrowColor #356854
+skinparam packageStyle rectangle
+skinparam classBackgroundColor #EFF5E9
+skinparam classBorderColor #356854
+[*] --> pending : cliente cria
+pending --> pending : editar
+pending --> approved : agente aprova com parecer
+pending --> rejected : agente recusa com parecer
+pending --> cancelled : cancelar
+rejected --> pending : corrigir / reenviar
+approved --> pending : agente modifica
+approved --> cancelled : cancelar
+approved --> contracted : executar contrato
+cancelled --> [*]
+contracted --> [*]
+note right of approved
+Conflito de período revalidado.
+end note
+note right of contracted
+Um contrato por pedido.
+Crédito opcional: banco concedente.
+end note
+@enduml

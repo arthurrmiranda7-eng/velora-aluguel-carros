@@ -1,0 +1,105 @@
+@startuml
+skinparam backgroundColor #F8FAF7
+skinparam shadowing false
+skinparam defaultFontName SansSerif
+skinparam ArrowColor #356854
+skinparam packageStyle rectangle
+skinparam classBackgroundColor #EFF5E9
+skinparam classBorderColor #356854
+hide empty methods
+class Usuario {
+ +id: string
+ +role: client | company | bank
+ +name: string
+ +email: string
+ -passwordHash: string
+}
+class Cliente {
+ +cpf: string
+ +rg: string
+ +address: string
+ +profession: string
+}
+class Agente
+class Empresa
+class Banco
+class Renda {
+ +name: string
+ +income: decimal
+}
+class Automovel {
+ +id: string
+ +registration: string
+ +year: integer
+ +brand: string
+ +model: string
+ +plate: string
+ +dailyRate: decimal
+ +ownerType: client | company | bank
+ +ownerId: string
+}
+class Pedido {
+ +id: string
+ +clientId: string
+ +carId: string
+ +startDate: date
+ +endDate: date
+ +days: integer
+ +total: decimal
+ +status: pending | approved | rejected | cancelled | contracted
+ +notes: string
+ +creditRequested: boolean
+}
+class EventoHistorico {
+ +at: datetime
+ +action: string
+ +actorName: string
+ +note: string
+}
+class Contrato {
+ +id: string
+ +requestId: string
+ +clientId: string
+ +carId: string
+ +startDate: date
+ +endDate: date
+ +total: decimal
+ +ownerType: client | company | bank
+ +ownerId: string
+ +status: active
+ +createdAt: datetime
+}
+class Credito {
+ +bankId: string
+ +principal: decimal
+ +installments: integer
+ +interestRate: decimal (mensal %)
+ +installmentAmount: decimal
+ +totalFinanced: decimal
+}
+Usuario <|-- Cliente
+Usuario <|-- Agente
+Agente <|-- Empresa
+Agente <|-- Banco
+Cliente "1" *-- "0..3" Renda : employers
+Cliente "1" -- "0..*" Pedido : solicita
+Automovel "1" -- "0..*" Pedido : carId
+Agente "1" ..> "0..*" Pedido : modifica / avalia
+Pedido "1" *-- "1..*" EventoHistorico : history (inclui parecer)
+Pedido "1" -- "0..1" Contrato : gera após aprovação
+Cliente "1" -- "0..*" Contrato : contratante
+Automovel "1" -- "0..*" Contrato : objeto
+Contrato "1" *-- "0..1" Credito : credit
+Banco "1" -- "0..*" Credito : concede
+Contrato --> Usuario : proprietário via\nownerType + ownerId
+note right of Usuario
+Especializações conceituais são implementadas
+por role na coleção users.
+Senhas são derivadas com salt.
+end note
+note bottom of Pedido
+Período [startDate, endDate).
+Editar exige novo parecer.
+Rendas, histórico e crédito são objetos aninhados.
+end note
+@enduml

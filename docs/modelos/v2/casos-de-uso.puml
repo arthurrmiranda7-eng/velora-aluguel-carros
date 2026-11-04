@@ -1,0 +1,58 @@
+@startuml
+skinparam backgroundColor #F8FAF7
+skinparam shadowing false
+skinparam defaultFontName SansSerif
+skinparam ArrowColor #356854
+skinparam packageStyle rectangle
+skinparam classBackgroundColor #EFF5E9
+skinparam classBorderColor #356854
+left to right direction
+actor Visitante
+actor "Usuário cadastrado" as U
+actor Cliente
+actor Agente
+actor Empresa
+actor Banco
+U <|-- Cliente
+U <|-- Agente
+Agente <|-- Empresa
+Agente <|-- Banco
+rectangle "Velora — v2" {
+ usecase "Cadastrar cliente" as C
+ usecase "Autenticar / sair" as L
+ usecase "Consultar / editar\npróprio cadastro" as PC
+ usecase "Gerenciar clientes\n(CRUD)" as CRUD
+ usecase "Consultar automóveis" as F
+ usecase "Criar pedido" as P
+ usecase "Consultar status\ne histórico" as S
+ usecase "Modificar pedido" as M
+ usecase "Cancelar pedido" as X
+ usecase "Avaliar financeiramente\ncom parecer" as A
+ usecase "Executar contrato" as E
+ usecase "Definir proprietário" as O
+ usecase "Associar crédito" as B
+}
+Visitante --> C
+U --> L
+Cliente --> PC
+Cliente --> F
+Cliente --> P
+Cliente --> S
+Cliente --> M
+Cliente --> X
+Agente --> CRUD
+Agente --> S
+Agente --> M
+Agente --> A
+Agente --> E
+E ..> O : <<include>>
+B ..> E : <<extend>>\ncrédito opcional
+Banco --> B
+note bottom of E
+Precondição: pedido aprovado.
+A autenticação é precondição das ações internas.
+end note
+note bottom of B
+Somente o banco autenticado concede o crédito.
+end note
+@enduml

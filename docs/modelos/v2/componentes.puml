@@ -1,0 +1,31 @@
+@startuml
+skinparam backgroundColor #F8FAF7
+skinparam shadowing false
+skinparam defaultFontName SansSerif
+skinparam ArrowColor #356854
+skinparam packageStyle rectangle
+skinparam classBackgroundColor #EFF5E9
+skinparam classBorderColor #356854
+node "Computadores locais — cliente / empresa / banco" {
+ [Navegador] as B
+ [HTML5 + CSS3 + Bootstrap 5 local] as UI
+ [JavaScript + Fetch API] as JS
+ B --> UI : renderiza
+ UI --> JS : ações
+}
+node "Servidor central Node.js" {
+ [Arquivos estáticos public/] as Static
+ [API REST /api\nSessão + autorização + validação] as API
+ [Regras de pedidos, pareceres,\ncontratos e crédito] as Rules
+ [JSON Server 0.17.4 / Lowdb] as JSON
+ database "db.json\nusers, cars, requests, contracts" as DB
+ API --> Rules
+ Rules --> JSON
+ JSON --> DB : leitura / escrita
+}
+B --> Static : HTTP GET
+JS --> API : HTTP / JSON\nAuthorization: Bearer
+note bottom of DB
+Arquivo persistente local; não é servido ao navegador.
+end note
+@enduml

@@ -1,0 +1,40 @@
+@startuml
+skinparam backgroundColor #F8FAF7
+skinparam shadowing false
+skinparam defaultFontName SansSerif
+skinparam ArrowColor #356854
+skinparam packageStyle rectangle
+skinparam classBackgroundColor #EFF5E9
+skinparam classBorderColor #356854
+package "Subsistema de construção dinâmica de páginas" as UI {
+ package "Apresentação HTML / Bootstrap / CSS" as View
+ package "JavaScript / navegação / formulários" as Client
+ package "Comunicação Fetch" as Fetch
+ View --> Client
+ Client --> Fetch
+}
+package "Subsistema de gestão de pedidos e contratos" as MG {
+ package "Autenticação e autorização" as Auth
+ package "Cadastro de clientes" as Clients
+ package "Catálogo de automóveis" as Cars
+ package "Pedidos e análise financeira" as Req
+ package "Contratos e crédito" as Contracts
+ package "Persistência JSON Server / Lowdb" as Repo
+ Clients --> Auth
+ Cars --> Auth
+ Req --> Auth
+ Contracts --> Auth
+ Req --> Clients
+ Req --> Cars
+ Contracts --> Req
+ Clients --> Repo
+ Cars --> Repo
+ Req --> Repo
+ Contracts --> Repo
+}
+Fetch --> MG : HTTP / JSON / bearer
+note bottom of MG
+Pacotes lógicos: no protótipo, o servidor compacto
+concentra rotas, validações e acesso à persistência.
+end note
+@enduml
