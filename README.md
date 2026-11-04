@@ -35,7 +35,6 @@ Protótipo acadêmico executável localmente. A interface e a API utilizam as te
 - [API REST e regras de negócio](docs/api.md).
 - [Arquitetura e decisões](docs/arquitetura.md).
 - [Evolução dos modelos](docs/modelos/REVISOES.md).
-- [Roteiro de apresentação](docs/apresentacao.md).
 - [Testes manuais](docs/testes-manuais.md).
 - [Resultados e limites da validação](docs/validacao.md).
 
@@ -188,7 +187,6 @@ velora/
     ├── arquitetura.md         # Subsistemas e decisões
     ├── api.md                 # Contrato HTTP e regras
     ├── testes-manuais.md      # Roteiro de verificação
-    ├── apresentacao.md        # Roteiro de demonstração
     └── modelos/
         ├── index.html        # Visualização offline dos diagramas finais
         ├── REVISOES.md
@@ -207,7 +205,7 @@ velora/
 5. Após aprovação, formalize um contrato com o proprietário correspondente.
 6. Repita com a conta do banco para associar um contrato de crédito.
 
-Veja o [roteiro completo de apresentação](docs/apresentacao.md) e o [roteiro de testes](docs/testes-manuais.md). O sistema é uma aplicação web responsiva; não há aplicativo mobile nativo.
+Veja o [roteiro de testes](docs/testes-manuais.md). O sistema é uma aplicação web responsiva; não há aplicativo mobile nativo.
 
 ### 💻 Exemplo de Saída no Terminal (API)
 
@@ -262,5 +260,6 @@ Ao professor João Paulo Aramuni pelo enunciado, material e template de document
 ## 📄 Licença
 
 Este pacote é uma entrega acadêmica. O titular do trabalho deverá definir a licença de distribuição do código autoral antes de publicação aberta. Bootstrap e demais dependências mantêm suas próprias licenças; os créditos de terceiros devem ser preservados. Não se atribui uma licença MIT ao trabalho sem decisão do autor.
+
 
 

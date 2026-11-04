@@ -1,4 +1,4 @@
-# Requisitos, histórias e rastreabilidade
+﻿# Requisitos, histórias e rastreabilidade
 
 ## Escopo e atores
 
@@ -43,7 +43,7 @@ O enunciado do LAB02 exige um sistema de aluguel acessível após cadastro prév
 | Dois subsistemas | Todas | Pacotes e componentes | `public/` versus `server.cjs`/JSON Server |
 | HTML, CSS, JS, Bootstrap 5, Fetch, JSON Server | Todas | Componentes | arquivos frontend, API e `db.json` |
 | Casos de uso, histórias, classes, pacotes, componentes | Todas | `modelos/v1` e `modelos/v2` | fontes PlantUML, imagens finais, este documento |
-| Revisão de modelos e comparação na apresentação | Todas | Registro de revisão | `modelos/REVISOES.md`, `apresentacao.md` |
+| Revisão de modelos e comparação na apresentação | Todas | Registro de revisão | `modelos/REVISOES.md` |
 | README do template | — | — | README adaptado; original incluído |
 | GitHub atualizado com código e versões | — | — | Pacote pronto para publicar; exige push na conta do aluno |
 
@@ -57,3 +57,4 @@ O enunciado do LAB02 exige um sistema de aluguel acessível após cadastro prév
 6. A exclusão de cliente com histórico de pedidos/contratos retorna conflito.
 7. CPF e e-mail identificam contas únicas. CPF com apenas dígitos repetidos ou verificadores incorretos é recusado.
 8. Valores de orçamento são calculados no servidor, não confiados ao JSON enviado pelo navegador.
+
